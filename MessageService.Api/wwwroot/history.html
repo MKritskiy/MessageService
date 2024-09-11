@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message History</title>
+</head>
+<body>
+    <h1>Message History</h1>
+    <button id="loadHistory">Load History</button>
+    <div id="history"></div>
+
+    <script>
+        document.getElementById('loadHistory').addEventListener('click', async function() {
+            const endDate = new Date();
+            const startDate = new Date(endDate.getTime() - 10 * 60 * 1000); // 10 minutes ago
+
+            const response = await fetch(`http://localhost:5000/api/history?startDate=${startDate.toISOString()}&endDate=${endDate.toISOString()}`);
+            const messages = await response.json();
+
+            const historyDiv = document.getElementById('history');
+            historyDiv.innerHTML = '';
+
+            messages.forEach(message => {
+                const messageElement = document.createElement('div');
+                messageElement.textContent = `[${new Date(message.timestamp).toUTCString()}] ${message.text} (Sequence: ${message.sequenceNumber})`;
+                historyDiv.appendChild(messageElement);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -10,6 +10,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решен
 		Docker\docker-compose.yml = Docker\docker-compose.yml
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{E6B29520-270D-495D-B4F7-F174F551C7F5}"
+	ProjectSection(SolutionItems) = preProject
+		Database\init.sql = Database\init.sql
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageServiceTest", "MessageServiceTest\MessageServiceTest.csproj", "{99FF4AC9-9900-4EE5-AFA6-4C5627759A2F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +27,10 @@ Global
 		{012FEFCF-365C-4838-9525-EEE1B8E91D78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{012FEFCF-365C-4838-9525-EEE1B8E91D78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{012FEFCF-365C-4838-9525-EEE1B8E91D78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99FF4AC9-9900-4EE5-AFA6-4C5627759A2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99FF4AC9-9900-4EE5-AFA6-4C5627759A2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99FF4AC9-9900-4EE5-AFA6-4C5627759A2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99FF4AC9-9900-4EE5-AFA6-4C5627759A2F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
